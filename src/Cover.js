@@ -40,7 +40,7 @@ const MeName = styled.span`
 export const Cover = () => (
   <Root>
     <Center>
-      <Img src={'./img/code-review.png'} width={450} />
+      <Img src={'./img/code-review-cover.png'} width={450} />
       <Title mt={20}>How to apply a code code review</Title>
       <Subtitle mt={20}>Tips for better coexistence</Subtitle>
       <MeName mt={100}>Mauricio R Duarte</MeName>

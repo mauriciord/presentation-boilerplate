@@ -16,16 +16,17 @@
     "styled-system": "^5.0.15"
   },
   "scripts": {
-    "build": "mdx-deck build src/deck.mdx",
+    "build": "rimraf dist && mdx-deck build src/deck.mdx",
     "help": "mdx-deck",
     "image": "mdx-deck screenshot src/deck.mdx",
     "pdf": "mdx-deck pdf src/deck.mdx",
-    "copy:static": "cp -r src/img dist",
+    "copy:static": "rimraf dist/img && cp -r src/img dist",
     "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
     "start": "mdx-deck src/deck.mdx",
     "postinstall": "patch-package"
   },
   "devDependencies": {
-    "patch-package": "^6.1.2"
+    "patch-package": "^6.1.2",
+    "rimraf": "^3.0.0"
   }
 }
