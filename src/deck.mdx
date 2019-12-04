@@ -1,6 +1,5 @@
 import { Head, Image, Appear } from 'mdx-deck'
-import { Split, FullScreenCode } from 'mdx-deck/layouts'
-import { CodeSurfer } from "mdx-deck-code-surfer";
+import { Split } from 'mdx-deck/layouts'
 
 import { Cover } from './Cover';
 import { Intro } from './Intro';
@@ -8,6 +7,11 @@ import { Img } from './Img';
 import { InlineImg } from './InlineImg';
 import { Thanks } from './Thanks';
 import { Feedback } from './Feedback';
+
+import { Before } from './pages/Before';
+import Mentoring from './pages/Mentoring';
+import WhatToLookFor from './pages/WhatToLookFor';
+import Navigating from './pages/Navigating';
 
 export { default as theme } from './theme'
 
@@ -23,25 +27,46 @@ export { default as theme } from './theme'
 
 ---
 
+# Before we start
+
+> "Even you doing your best, or with people that you consider the bests, not always have the best result"
+- Developer
+
+---
+
 # Overview
 
 <ul>
-    <li>
-        Code review principles
-    </li>
-    <li>
-        What to look for in code review
-    </li>
-    <li>
-        Examining and navigating a code review
-    </li>
-    <li>
-        How to write code review comments
-    </li>
-    <li>
-        Managing disagreements in a code review
-    </li>
+    <Appear>
+        <li>
+            Code review as Mentoring
+        </li>
+        <li>
+            Code review principles
+        </li>
+        <li>
+            What to look for in code review
+        </li>
+        <li>
+            Examining and navigating a code review
+        </li>
+        <li>
+            Speed of a code review
+        </li>
+        <li>
+            How to write code review comments
+        </li>
+        <li>
+            Managing disagreements in a code review
+        </li>
+    </Appear>
 </ul>
+
+---
+
+## Code review as Mentoring
+
+<Mentoring />
 
 ---
 
@@ -56,14 +81,22 @@ export { default as theme } from './theme'
           The style guide is the absolute authority. If there is no previous style, accept the author’s.
         </li>
         <li>
-          Aspects of software design are almost never a pure style issue or just a personal preference. 
+          Aspects of software design are almost never a pure style issue or just a personal preference.
         </li>
     </Appear>
 </ul>
 
 ---
 
-# What to look for in code review
+## What to look for in code review
+
+<WhatToLookFor />
+
+---
+
+## Examining and navigating a code review
+
+<Navigating />
 
 ---
 
