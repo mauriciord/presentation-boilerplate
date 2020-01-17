@@ -12,14 +12,11 @@
     "styled-system": "^5.0.15"
   },
   "scripts": {
-    "build": "rimraf dist && mdx-deck build src/deck.mdx",
-    "help": "mdx-deck",
+    "build": "mdx-deck build src/deck.mdx",
     "image": "mdx-deck screenshot src/deck.mdx",
     "pdf": "mdx-deck pdf src/deck.mdx",
-    "copy:static": "rimraf dist/img && cp -r src/img dist",
-    "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
-    "start": "mdx-deck src/deck.mdx",
-    "postinstall": "patch-package"
+    "publish:deck": "yarn build gh-pages -d public",
+    "start": "mdx-deck src/deck.mdx"
   },
   "devDependencies": {
     "mdx-code": "^1.1.3",
